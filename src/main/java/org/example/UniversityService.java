@@ -20,7 +20,11 @@ public class UniversityService {
                 .reduce(0.0,(x,y)-> x+y)/course.getStudents().size();
     }
     public static double universityGradeAverage(University university){
-        int amountOfStudents = university.courses().stream().map(course -> course.getStudents().size()).reduce(0,(x,y) -> x+y);
+        int amountOfStudents = university.courses()
+                .stream()
+                .map(course -> course.getStudents().size())
+                .reduce(0,(x,y) -> x+y);
+
         return university.courses()
                 .stream()
                 .map(Course::getStudents)

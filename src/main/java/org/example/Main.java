@@ -1,5 +1,7 @@
 package org.example;
 
+import lombok.Builder;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,10 +32,17 @@ public class Main {
        Student student2 = new Student("33234", "John Doe", "Musterstraße 20, Rheine ", "3.0");
         List<Student> studentList = List.of(student,student2);
         Course course = new Course("101", "Wirtschaftslehre", teacher, studentList);
+        Student student3 = Student.builder()
+                .id("26354")
+                .name("Martin Mustermann")
+                .address("Musterstraße 42, 42424 Musterstadt")
+                .grade("2.5")
+                .build();
 
         System.out.println(course.getStudents());
         System.out.println(course.getTeacher());
         System.out.println(course.getTeacher().name());
-        System.out.println(course.getStudents().get(0).getName());
+        System.out.println(course.getStudents().get(0));
+        System.out.println(student3);
     }
 }

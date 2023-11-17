@@ -8,9 +8,6 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 import java.util.stream.Collectors;
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class UniversityService {
 
     public static double courseGradeAverage(Course course){

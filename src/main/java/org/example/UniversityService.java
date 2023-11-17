@@ -1,8 +1,16 @@
 package org.example;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UniversityService {
     private University university;
 
@@ -15,13 +23,13 @@ public class UniversityService {
                 .stream()
                 .flatMap(List::stream)
                 .map(student -> student.getGrade())
-                .reduce(0.0, (x,y) -> (x+y)/course.getStudents().size());
+                .reduce(0.0, (x,y) -> (x+y))/course.getStudents().size();
     }
     public double universityGradeAverage(University university){
         return university.courses()
                 .stream()
                 .map(this::courseGradeAverage)
-                .reduce((double) 0,(x, y) -> (x+y)/university.courses().size());
+                .reduce((double) 0,(x, y) -> (x+y))/university.courses().size();
     }
     public List<Student> goodStudents(University university){
         return university.courses().stream()

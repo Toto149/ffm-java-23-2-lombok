@@ -28,7 +28,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
        Teacher teacher = new Teacher("1234","Habeck", "Wirtschaft");
-       Student student = new Student("23563", "Galois", "Dortmunder Straße 30, Hagen", "1.0");
+        teacher = teacher.withName("Lindner");
+        Student student = new Student("23563", "Galois", "Dortmunder Straße 30, Hagen", "1.0");
        Student student2 = new Student("33234", "John Doe", "Musterstraße 20, Rheine ", "3.0");
         List<Student> studentList = List.of(student,student2);
         Course course = new Course("101", "Wirtschaftslehre", teacher, studentList);
@@ -44,5 +45,7 @@ public class Main {
         System.out.println(course.getTeacher().name());
         System.out.println(course.getStudents().get(0));
         System.out.println(student3);
+
+        System.out.println(teacher);
     }
 }

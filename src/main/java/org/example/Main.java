@@ -29,15 +29,15 @@ public class Main {
     public static void main(String[] args) {
        Teacher teacher = new Teacher("1234","Habeck", "Wirtschaft");
         teacher = teacher.withName("Lindner");
-        Student student = new Student("23563", "Galois", "Dortmunder Straße 30, Hagen", "1.0");
-       Student student2 = new Student("33234", "John Doe", "Musterstraße 20, Rheine ", "3.0");
+        Student student = new Student("23563", "Galois", "Dortmunder Straße 30, Hagen", 1.0);
+       Student student2 = new Student("33234", "John Doe", "Musterstraße 20, Rheine ", 3.0);
         List<Student> studentList = List.of(student,student2);
         Course course = new Course("101", "Wirtschaftslehre", teacher, studentList);
         Student student3 = Student.builder()
                 .id("26354")
                 .name("Martin Mustermann")
                 .address("Musterstraße 42, 42424 Musterstadt")
-                .grade("2.5")
+                .grade(2.5)
                 .build();
 
         System.out.println(course.getStudents());

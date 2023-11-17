@@ -25,6 +25,8 @@ public class UniversityService {
                 .stream()
                 .map(Course::getStudents)
                 .flatMap(List::stream)
+                .collect(Collectors.toSet())
+                .stream()
                 .map(Student::getGrade)
                 .reduce((double) 0,(x, y) -> (x+y))/amountOfStudents;
     }

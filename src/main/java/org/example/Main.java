@@ -42,18 +42,24 @@ public class Main {
         Course course2 = new Course("202", "Mathematik", teacher,List.of(student3));
         List<Course> listCourse = List.of(course,course2);
 
-        System.out.println(course.getStudents());
+     System.out.println("============= Prints um die Funktionalität der Annotations von Lombok zu testen");
+     System.out.println(course.getStudents());
         System.out.println(course.getTeacher());
         System.out.println(course.getTeacher().name());
         System.out.println(course.getStudents().get(0));
         System.out.println(student3);
+     System.out.println(teacher);
+        System.out.println();
+        System.out.println();
 
-        System.out.println(teacher);
+
+
         University university = new University("113154252", "Universität Münster", listCourse);
         UniversityService universityService = new UniversityService(university);
-        System.out.println(universityService.courseGradeAverage(course));
-        System.out.println(universityService.universityGradeAverage(university));
-        System.out.println(universityService.goodStudents(university));
+        System.out.println("========Bonus Aufgabe");
+        System.out.println("Die Durchschnittsnote der Studenten des Kurses 1 ist: " + universityService.courseGradeAverage(course));
+        System.out.println("Die Durschnittsnote aller Kurse der Universität ist: "+ universityService.universityGradeAverage(university));
+        System.out.println("Die Liste der Studenten mit Note besser als 2 ist: " + universityService.goodStudents(university));
 
     }
 }

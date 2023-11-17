@@ -27,8 +27,8 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
-       Teacher teacher = new Teacher("1234","Habeck", "Wirtschaft");
-        teacher = teacher.withName("Lindner");
+       Teacher teacher = new Teacher("1234","Michael Mustermann", "Wirtschaft");
+        teacher = teacher.withName("Maria Musterfrau");
         Student student = new Student("23563", "Galois", "Dortmunder Straße 30, Hagen", 1.0);
        Student student2 = new Student("33234", "John Doe", "Musterstraße 20, Rheine ", 3.0);
         List<Student> studentList = List.of(student,student2);

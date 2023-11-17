@@ -55,11 +55,10 @@ public class Main {
 
 
         University university = new University("113154252", "Universität Münster", listCourse);
-        UniversityService universityService = new UniversityService(university);
         System.out.println("========Bonus Aufgabe");
-        System.out.println("Die Durchschnittsnote der Studenten des Kurses 1 ist: " + universityService.courseGradeAverage(course));
-        System.out.println("Die Durschnittsnote aller Kurse der Universität ist: "+ universityService.universityGradeAverage(university));
-        System.out.println("Die Liste der Studenten mit Note besser als 2 ist: " + universityService.goodStudents(university));
+        System.out.println("Die Durchschnittsnote der Studenten des Kurses 1 ist: " + UniversityService.courseGradeAverage(course));
+        System.out.println("Die Durschnittsnote aller Kurse der Universität ist: "+ UniversityService.universityGradeAverage(university));
+        System.out.println("Die Liste der Studenten mit Note besser als 2 ist: " + UniversityService.goodStudents(university));
 
     }
 }
